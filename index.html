@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushovit Nanda | AI/ML Engineer &amp; LLM Systems Researcher</title>
+  <meta name="description"
+    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, RAG systems, and requirements-quality ML research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="#home" class="brand">SN<span class="brand-dot">·</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="mailto:sushovit21@iiserb.ac.in?cc=sushovit.nanda@gmail.com" class="nav-cta">Get in
+        touch</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav"
+        aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#interests">Interests</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dash"></span>AI/ML Research Engineer · Multi-Agent Systems · AI
+            Security
+          </p>
+          <h1>Sushovit Nanda</h1>
+          <p class="hero-lede">
+            My research centers on a question that sits underneath most deployed AI systems: when a system has to decide
+            which model to call, whether a prompt is safe, or how a team of agents should coordinate, on what basis can
+            we trust that decision, and how would we know if it failed? I work on both sides of this problem. I build
+            the infrastructure that has to make these calls in production, including multi-signal LLM routing
+            architectures, adversarial detection pipelines, and multi-agent systems for regulated workflows. I also
+            study how to evaluate whether such systems are actually reliable, including work on LLM-as-a-Judge
+            pipelines, hallucination detection, and systematic failure analysis. The throughline across my work is
+            treating building and evaluating as one problem rather than two separate steps.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary"
+              href="https://drive.google.com/file/d/1x6nFn7WS6JY9sWBhvrnY_koBXm7DGGR6/view?usp=sharing" target="_blank"
+              rel="noopener">Download resume</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/SushovitNanda?tab=repositories" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/sushovit-nanda/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-figure">
+          <div class="hero-image-wrapper">
+            <img src="professional image.png" alt="Sushovit Nanda" class="hero-img" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about">
+      <div class="section-inner">
+        <p class="section-eyebrow">01 — About</p>
+        <div class="about-grid">
+          <div class="about-sidebar">
+            <h2 class="about-heading">Approaching LLMs as systems with measurable failure surfaces.</h2>
+            <div class="about-pillars">
+              <div class="about-pillar">
+                <span class="pillar-num">01</span>
+                <div>
+                  <h4>Systems &amp; Security</h4>
+                  <p>Real-time threat detection (&lt;130ms) &amp; agentic red-teaming frameworks.</p>
+                </div>
+              </div>
+              <div class="about-pillar">
+                <span class="pillar-num">02</span>
+                <div>
+                  <h4>Multi-Signal Routing</h4>
+                  <p>Patented RouteNeuro architecture &amp; continuous governance scoring.</p>
+                </div>
+              </div>
+              <div class="about-pillar">
+                <span class="pillar-num">03</span>
+                <div>
+                  <h4>Evaluation &amp; Benchmarks</h4>
+                  <p>LLM-as-a-Judge pipelines &amp; requirements quality evaluation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-body">
+            <p>
+              I'm an AI/ML engineer and researcher working across LLM systems infrastructure, multi-agent orchestration,
+              and
+              AI security. I tend to approach LLMs less as finished, intelligent systems and more as systems with
+              failure
+              surfaces: things to probe, measure, and harden before they reach production.
+            </p>
+            <p>
+              At Innobayt, I lead development of an agentic red-teaming framework that uses LLMs to automate adversarial
+              attack generation and vulnerability reporting. This includes a hybrid threat detection pipeline that flags
+              adversarial prompts in under 130ms, validated against the OWASP LLM Top 10, along with an asynchronous
+              module
+              for catching sensitive data leakage in model outputs. At BizNeuro AI, I architected the scoring
+              mathematics
+              behind RouteNeuro, a patented multi-signal LLM routing system for agentic workloads, including a
+              governance
+              mechanism that treats compliance and PII sensitivity as scored dimensions rather than hard filters.
+            </p>
+            <p>
+              My research runs in parallel to this engineering work rather than separate from it. My MS thesis at IISER
+              Bhopal benchmarks LLMs against classical and transformer baselines for automatically assessing the quality
+              of
+              agile software requirements, and includes an LLM-as-a-Judge evaluation pipeline built to test whether
+              automated evaluation can reliably substitute for human annotation. This grew out of SCALAR, my bachelor's
+              thesis on unsupervised requirement clustering, currently in major revisions at <em>Science of Computer
+                Programming</em>.
+            </p>
+            <p>
+              Across both tracks, I'm drawn to the same set of problems: LLM reliability and safety, evaluation and
+              benchmarking at scale, adversarial robustness, and building systems that don't just perform well, but fail
+              predictably. If you're working on making LLM systems more trustworthy in production, that's the kind of
+              problem I want to be close to.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="experience">
+      <div class="section-inner">
+        <p class="section-eyebrow">02 — Experience</p>
+        <h2 class="section-title">Research &amp; engineering timeline</h2>
+
+        <ol class="timeline">
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">May 2026 — Present</span></div>
+            <div class="tl-content">
+              <h3>Research Scientist Intern <span class="tl-org">· BizNeuro AI</span></h3>
+              <p class="tl-role">Sole architect of the composite multi-signal scoring function S(m) for RouteNeuro, an
+                intelligent LLM routing system for agentic AI workloads achieving a routing-decision latency SLA of
+                sub-10ms P99.</p>
+              <ul>
+                <li>Named inventor on Indian Patent App. No. 202611070588; designed a four-class routing signal taxonomy
+                  — Semantic, Econometric, Operational, Governance — with full mathematical formulation.</li>
+                <li>Formulated a governance penalty mechanism enabling HIPAA/GDPR compliance tiers and PII sensitivity
+                  to act as continuously scored, tradeable dimensions rather than binary hard filters — a structural
+                  novelty over RouteLLM, OpenRouter, and LiteLLM.</li>
+                <li>Designed an agentic session-context signal preserving model continuity across multi-turn sessions,
+                  with rule-based overrides for active tool-call chains and context-window constraints.</li>
+                <li>Ran a 30+ page literature survey producing a novelty gap matrix and patent claim space forming the
+                  IP basis for the filed application; stood up the GCP infrastructure skeleton and module interface
+                  contracts for parallel team development.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">Dec 2025 — Present</span></div>
+            <div class="tl-content">
+              <h3>AI/ML Engineer, R&amp;D <span class="tl-org">· Innobayt Innovative Solutions LLC</span></h3>
+              <p class="tl-role">Leading research and development of an intelligent <strong>multi-turn AI red-teaming
+                  agentic framework</strong> employing LLMs to automate adversarial attack generation, evaluation
+                orchestration,
+                and vulnerability reporting, advancing the study of security monitoring and output reliability in
+                production pipelines.</p>
+              <ul>
+                <li>Architected an asynchronous 2-step hybrid threat detection pipeline in FastAPI — benign prompts
+                  detected within 25ms, adversarial prompts classified within 130ms.</li>
+                <li>Deployed the transformer-based threat classifier as a quantized ONNX model on Azure Blob Container
+                  for portable, cloud-native inference.</li>
+                <li>Validated the system against 500+ adversarial prompts with Promptfoo, achieving 96%+ detection
+                  across all OWASP LLM Top 10 categories.</li>
+                <li>Built an asynchronous egress-detection module for sensitive data leakage, backed by an async RAG
+                  pipeline on Azure ML Studio and Cosmos DB.</li>
+                <li>The threat detection model and intelligent multi-turn red-teaming model can be explored live at <a
+                    href="https://velyana.com/" target="_blank" rel="noopener">velyana.com ↗</a>.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">Aug 2025 — May 2026</span></div>
+            <div class="tl-content">
+              <h3>Master's Thesis <span class="tl-org">· IISER Bhopal</span></h3>
+              <p class="tl-role">Improving the Quality of Agile Requirements Using Machine Learning — supervised by Dr.
+                Arpit Sharma.</p>
+              <ul>
+                <li>Built a curated dataset of 6,170 agile user stories annotated with six quality-violation labels;
+                  benchmarked 6 open-weight LLMs across 10 prompting strategies, improving up to 18% over zero-shot
+                  baselines.</li>
+                <li>Designed a four-paradigm evaluation framework spanning classical ML, deep sequential models,
+                  fine-tuned transformer encoders, and prompt-engineered LLMs across binary, multi-class, and
+                  multi-label classification.</li>
+                <li>Built an automated LLM-as-a-Judge pipeline replacing manual annotation at &gt;80% agreement
+                  consistency; applied NF4 quantization, cutting GPU memory by 50% while retaining &gt;95% accuracy.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">Jan 2025 — Jun 2025</span></div>
+            <div class="tl-content">
+              <h3>Bachelor's Thesis — SCALAR <span class="tl-org">· IISER Bhopal</span></h3>
+              <p class="tl-role">Semantic clustering &amp; labeling toolkit for crowd-based software requirements.</p>
+              <ul>
+                <li>Designed a semantic-embedding + unsupervised clustering pipeline requiring no labeled training data,
+                  reaching an F1 of 0.91 on held-out data.</li>
+                <li>Built a greedy cluster-labeling algorithm enabling zero-shot classification in data-scarce settings
+                  — cutting manual analysis effort 60–75% and letting teams process 4–5× more requirements in the same
+                  window.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">May 2024 — Aug 2024</span></div>
+            <div class="tl-content">
+              <h3>Research Intern <span class="tl-org">· IIT Bhubaneswar</span></h3>
+              <p class="tl-role">Counterfactual reasoning, robustness, and quantization in LLMs.</p>
+              <ul>
+                <li>Ran controlled comparisons of zero-shot, few-shot, and chain-of-thought prompting across three model
+                  families to characterize prompt sensitivity and failure modes.</li>
+                <li>Fine-tuned LLMs with LoRA/QLoRA and NF4 quantization — 50% lower GPU memory with &gt;95% of
+                  full-precision accuracy retained; ablations improved task accuracy ~12% over baselines.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-when"><span class="tl-date">May 2023 — Aug 2023</span></div>
+            <div class="tl-content">
+              <h3>Summer Intern <span class="tl-org">· IIT Indore</span></h3>
+              <p class="tl-role">Machine Learning &amp; Support Vector Machines (SVM).</p>
+              <ul>
+                <li>Studied theoretical foundations, margin optimization, and dual formulation of Support Vector
+                  Machines (SVM) for classification and regression tasks.</li>
+                <li>Implemented ML algorithms and kernel functions in MATLAB using <code>fitcsvm</code> across benchmark
+                  datasets.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH / PUBLICATIONS ===================== -->
+    <section id="research" class="research">
+      <div class="section-inner">
+        <p class="section-eyebrow">03 — Research</p>
+        <h2 class="section-title">Publications &amp; patents</h2>
+
+        <div class="pub-grid">
+          <article class="pub-card">
+            <p class="pub-kind">Patent · Filed Jun 5, 2026</p>
+            <h3>System and Method for Intelligent Routing of Inference Requests to Language Models</h3>
+            <p class="pub-meta">Sushovit Nanda · Indian Patent Application No. 202611070588</p>
+            <p class="pub-desc">Named inventor and principal architect of the four-class signal taxonomy and composite
+              scoring function S(m) underlying RouteNeuro's routing decisions.</p>
+          </article>
+
+          <article class="pub-card">
+            <p class="pub-kind">Paper · Major revisions — response submitted, Science of Computer Programming (Elsevier)
+            </p>
+            <h3>SCALAR: Semantic Clustering and Labeling Based Toolkit for Classification of Crowd-Based Software
+              Requirements</h3>
+            <p class="pub-meta">Sushovit Nanda, Arpit Sharma</p>
+            <p class="pub-desc">An open-source unsupervised toolkit that clusters and labels crowd-sourced software
+              requirements via sentence embeddings, eliminating the need for labeled training data.</p>
+            <a class="pub-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5588660" target="_blank"
+              rel="noopener">Read on SSRN ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH INTERESTS ===================== -->
+    <section id="interests" class="interests-section">
+      <div class="section-inner">
+        <p class="section-eyebrow">04 — Interests</p>
+        <h2 class="section-title">Research interests</h2>
+
+        <ul class="tag-row interest-tags">
+          <li>Agentic AI &amp; multi-agent systems</li>
+          <li>LLM routing &amp; model selection</li>
+          <li>AI security &amp; adversarial robustness</li>
+          <li>Compute-efficient fine-tuning</li>
+          <li>Hallucination detection &amp; output faithfulness</li>
+          <li>Automated requirements engineering</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="projects">
+      <div class="section-inner">
+        <p class="section-eyebrow">05 — Projects</p>
+        <h2 class="section-title">Selected systems</h2>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Multi-Agent Healthcare AI Assistant</h3>
+            <p>A supervisor-routed multi-agent assistant for hospital operations — doctor discovery, appointment
+              booking, and insurance checks — delegated across specialist sub-agents with a three-tier intent router
+              (emergency keyword net → zero-shot classifier → LLM fallback) and a two-tier semantic cache backed by
+              Azure AI Foundry and Azure AI Content Safety.</p>
+            <ul class="tag-row project-tags">
+              <li>Multi-agent orchestration</li>
+              <li>Azure AI Foundry</li>
+              <li>Semantic caching</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Multi-Agent-Healthcare-AI-Assistant"
+              target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Threat Detection Model — Evaluation API</h3>
+            <p>A FastAPI service exposing a hybrid rules + ML threat-scoring engine as a REST API with a Streamlit UI —
+              returns category, severity, confidence, and evidence spans per request, with live latency metrics and
+              JSONL audit logging for observability.</p>
+            <ul class="tag-row project-tags">
+              <li>FastAPI</li>
+              <li>Hybrid ML + rules scoring</li>
+              <li>Docker</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Threat-Detection-Model-Evaluation-API"
+              target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Multi-Modal RAG-Based QA System</h3>
+            <p>A retrieval-augmented QA chatbot over PDFs with text, tables, and images — hybrid TF-IDF + Word2Vec +
+              SBERT retrieval fused via reciprocal rank fusion, cross-encoder reranking, and a Streamlit UI with a live
+              retrieval-latency dashboard.</p>
+            <ul class="tag-row project-tags">
+              <li>Hybrid retrieval</li>
+              <li>Cross-encoder reranking</li>
+              <li>Streamlit</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Multi-Modal-RAG-Based-QA-System"
+              target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>SHL Assessment Recommender</h3>
+            <p>A conversational RAG API that shortlists SHL assessments from a local catalog using a slot-based dialogue
+              policy, FastEmbed + FAISS retrieval, and Gemini for extraction and grounded recommendation — with an
+              evaluation harness scoring relevance, retrieval recall, and groundedness.</p>
+            <ul class="tag-row project-tags">
+              <li>RAG</li>
+              <li>FAISS</li>
+              <li>FastAPI</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Assessment_Recommender" target="_blank"
+              rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>SCALAR Tool</h3>
+            <p>The open-source implementation of my bachelor's thesis — a web and CLI toolkit that mines Wikipedia for
+              class-specific corpora and clusters crowd-sourced software requirements via configurable sentence
+              embeddings (SBERT/RoBERTa) and clustering methods (K-Means, GMM), with no labeled data required.</p>
+            <ul class="tag-row project-tags">
+              <li>Unsupervised clustering</li>
+              <li>Flask</li>
+              <li>Sentence embeddings</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/SCALAR-Tool" target="_blank"
+              rel="noopener">View repository ↗</a>
+          </article>
+        </div>
+
+        <a class="repo-link" href="https://github.com/SushovitNanda?tab=repositories" target="_blank"
+          rel="noopener">Browse full repository list on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="skills">
+      <div class="section-inner">
+        <p class="section-eyebrow">06 — Toolkit</p>
+        <h2 class="section-title">Skills &amp; technologies</h2>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>LLM Routing &amp; Systems</h3>
+            <ul class="tag-row">
+              <li>Multi-signal composite scoring</li>
+              <li>Algorithm &amp; mathematical modeling</li>
+              <li>Signal taxonomy design</li>
+              <li>Agentic session-context routing</li>
+              <li>Multi-agent orchestration</li>
+              <li>Patent research &amp; IP strategy</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Generative AI &amp; LLMs</h3>
+            <ul class="tag-row">
+              <li>RAG architectures</li>
+              <li>Async RAG</li>
+              <li>LangChain</li>
+              <li>LlamaIndex</li>
+              <li>Agentic AI</li>
+              <li>LLM-as-a-Judge</li>
+              <li>Prompt engineering</li>
+              <li>Chain-of-thought reasoning</li>
+              <li>Fine-tuning</li>
+              <li>LoRA / QLoRA / PEFT</li>
+              <li>NF4 quantization</li>
+              <li>Semantic embeddings</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>ML &amp; NLP</h3>
+            <ul class="tag-row">
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>HuggingFace Transformers</li>
+              <li>Scikit-Learn</li>
+              <li>FAISS</li>
+              <li>Chroma</li>
+              <li>Model evaluation &amp; benchmarking</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>AI Security &amp; Robustness</h3>
+            <ul class="tag-row">
+              <li>Adversarial red-teaming (Promptfoo)</li>
+              <li>OWASP LLM Top 10</li>
+              <li>Threat modeling</li>
+              <li>Multi-turn agentic red-teaming</li>
+              <li>Hybrid inference pipeline design</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Backend &amp; APIs</h3>
+            <ul class="tag-row">
+              <li>FastAPI</li>
+              <li>REST APIs</li>
+              <li>Docker</li>
+              <li>CI/CD pipelines</li>
+              <li>Structured observability logging</li>
+              <li>Streamlit</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <ul class="tag-row">
+              <li>Azure ML Studio</li>
+              <li>Azure OpenAI</li>
+              <li>Azure Blob Storage</li>
+              <li>Azure AI Foundry</li>
+              <li>Cosmos DB</li>
+              <li>GCP</li>
+              <li>ONNX deployment</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Languages &amp; Tools</h3>
+            <ul class="tag-row">
+              <li>Python</li>
+              <li>Git</li>
+              <li>Bash</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="education">
+      <div class="section-inner">
+        <p class="section-eyebrow">07 — Education</p>
+        <div class="edu-card">
+          <div class="edu-main">
+            <h3>Dual Degree, Bachelor of Science &amp; Master of Science</h3>
+            <p class="edu-org">Electrical Engineering and Computer Science (Major) · Data Science and Engineering
+              (Minor)</p>
+            <p class="edu-org">Indian Institute of Science Education and Research (IISER) Bhopal</p>
+          </div>
+          <p class="edu-date">2021 — 2026</p>
+        </div>
+        <p class="edu-note">Master's thesis: <em>Improving the Quality of Agile Requirements Using Machine
+            Learning</em>, supervised by Dr. Arpit Sharma.</p>
+
+        <div class="coursework">
+          <div class="skill-group">
+            <h3>Major Coursework — Electrical Engineering &amp; Computer Science</h3>
+            <ul class="tag-row">
+              <li>Introduction to Programming</li>
+              <li>Discrete Mathematics I</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Basic Electronics</li>
+              <li>Signals and Systems</li>
+              <li>Principles of Communications</li>
+              <li>Theory of Computation</li>
+              <li>Electronic Devices</li>
+              <li>Electromagnetic Theory</li>
+              <li>Control Systems</li>
+              <li>Analog Circuits</li>
+              <li>Digital Circuits and Systems</li>
+              <li>EECS Laboratory I &amp; II</li>
+              <li>Computer Organisation</li>
+              <li>Computer Networks</li>
+              <li>Operating Systems</li>
+              <li>Introduction to MEMS</li>
+              <li>Smart Sensing Technologies</li>
+              <li>Multi-agent Reinforcement Learning</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Minor Coursework — Data Science &amp; Engineering</h3>
+            <ul class="tag-row">
+              <li>Data Science and Machine Learning</li>
+              <li>Artificial Intelligence</li>
+              <li>Deep Learning</li>
+              <li>Natural Language Processing</li>
+              <li>Algorithms</li>
+              <li>Computer Vision</li>
+              <li>Data Science in Practice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="contact">
+      <div class="section-inner">
+        <p class="section-eyebrow">08 — Contact</p>
+        <h2 class="section-title">Let's route something together</h2>
+        <p class="contact-lede">Open to research collaborations, engineering roles, and conversations about LLM systems,
+          routing, and evaluation.</p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a class="contact-value" href="mailto:sushovit21@iiserb.ac.in">sushovit21@iiserb.ac.in</a>
+            <a class="contact-value" href="mailto:sushovit.nanda@gmail.com">sushovit.nanda@gmail.com</a>
+          </div>
+          <a class="contact-item"
+            href="https://drive.google.com/file/d/1x6nFn7WS6JY9sWBhvrnY_koBXm7DGGR6/view?usp=sharing" target="_blank"
+            rel="noopener">
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">Download PDF</span>
+          </a>
+          <a class="contact-item" href="https://github.com/SushovitNanda?tab=repositories" target="_blank"
+            rel="noopener">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/SushovitNanda</span>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/sushovit-nanda/" target="_blank" rel="noopener">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">in/sushovit-nanda</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>© <span id="year"></span> Sushovit Nanda.</p>
+      <p class="footer-note">Last updated: July 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll-reveal for sections and timeline items
+    const revealTargets = document.querySelectorAll(
+      '.stat, .tl-item, .pub-card, .project-card, .skill-group, .edu-card, .about-pillar'
+    );
+    revealTargets.forEach(el => el.classList.add('reveal'));
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealTargets.forEach(el => io.observe(el));
+    } else {
+      revealTargets.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.site-nav a, .mobile-nav a');
+    const setActive = () => {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if (window.scrollY >= top) current = sec.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+      });
+    };
+    document.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+
+    // Sticky header shadow on scroll
+    const header = document.querySelector('.site-header');
+    const setHeaderState = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    document.addEventListener('scroll', setHeaderState, { passive: true });
+    setHeaderState();
+  </script>
+
+</body>
+
+</html>
