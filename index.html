@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sushovit Nanda | AI/ML Engineer &amp; LLM Systems Researcher</title>
   <meta name="description"
-    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, RAG systems, and requirements-quality ML research.">
+    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, frontier AI security, RAG systems, and requirements-quality ML research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -25,6 +25,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#programs">Programs</a>
         <a href="#research">Research</a>
         <a href="#interests">Interests</a>
         <a href="#projects">Projects</a>
@@ -42,6 +43,7 @@
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
+      <a href="#programs">Programs</a>
       <a href="#research">Research</a>
       <a href="#interests">Interests</a>
       <a href="#projects">Projects</a>
@@ -282,10 +284,79 @@
       </div>
     </section>
 
+    <!-- ===================== PROGRAMS / TRAINING ===================== -->
+    <section id="programs" class="programs">
+      <div class="section-inner">
+        <p class="section-eyebrow">03 — Programs</p>
+        <h2 class="section-title">Selective programs &amp; training</h2>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Selective training program · In-person, Singapore · Fully funded</p>
+              <h3>Frontier AI Security Training (FAST) Program</h3>
+              <p class="program-org">Singapore AI Safety Hub (SASH)</p>
+              <p class="program-select">Selected as one of <strong>20 participants</strong> from <strong>700+
+                  applicants</strong> who cleared the initial screening, following a technical work exercise and an
+                interview. A five-day, in-person intensive on attacking, controlling, and verifying frontier AI
+                models — from prompt-level exploits and AI control protocols to open-weight model attacks and compute
+                verification.</p>
+              <div class="program-links">
+                <a href="https://www.securefast.ai/" target="_blank" rel="noopener">securefast.ai ↗</a>
+                <a href="https://drive.google.com/file/d/1ArX0aSW9UOvIrrlZdsYgPsRuL1f8Se2Z/view?usp=sharing"
+                  target="_blank" rel="noopener">Invitation letter (PDF) ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">28 Sep — 2 Oct 2026</p>
+          </div>
+
+          <p class="curriculum-label">Curriculum — what the program covered</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">Day 0</span>
+              <h4>Pre-work</h4>
+              <p>Environment setup and a refresher on the fundamentals of frontier models, so the cohort starts from
+                a shared technical foundation.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">Day 1</span>
+              <h4>AI model recap</h4>
+              <p>What models read and produce: log probabilities, instruction hierarchies, prefilling, prompt
+                injection, and how guardrails succeed and fail.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">Day 2</span>
+              <h4>AI control</h4>
+              <p>Defences for when the model itself cannot be trusted: building and evaluating monitoring systems,
+                control protocols, and techniques for supervising increasingly capable agents.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">Day 3</span>
+              <h4>Open-weight security</h4>
+              <p>Attacking the model itself: removing safety fine-tuning from open-weight models, introducing
+                backdoors through data poisoning, and distilling models using only API access.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">Day 4</span>
+              <h4>Verification &amp; open problems</h4>
+              <p>Verifying what a model, and the hardware running it, is actually doing: compute verification,
+                security assurance, and the open research questions shaping the field.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">Day 5</span>
+              <h4>Next steps</h4>
+              <p>Refining a project with instructor feedback, mapping the landscape of research labs, fellowships,
+                grants, and career pathways, and one-on-one meetings with instructors.</p>
+            </li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
     <!-- ===================== RESEARCH / PUBLICATIONS ===================== -->
     <section id="research" class="research">
       <div class="section-inner">
-        <p class="section-eyebrow">03 — Research</p>
+        <p class="section-eyebrow">04 — Research</p>
         <h2 class="section-title">Publications &amp; patents</h2>
 
         <div class="pub-grid">
@@ -315,7 +386,7 @@
     <!-- ===================== RESEARCH INTERESTS ===================== -->
     <section id="interests" class="interests-section">
       <div class="section-inner">
-        <p class="section-eyebrow">04 — Interests</p>
+        <p class="section-eyebrow">05 — Interests</p>
         <h2 class="section-title">Research interests</h2>
 
         <ul class="tag-row interest-tags">
@@ -332,7 +403,7 @@
     <!-- ===================== PROJECTS ===================== -->
     <section id="projects" class="projects">
       <div class="section-inner">
-        <p class="section-eyebrow">05 — Projects</p>
+        <p class="section-eyebrow">06 — Projects</p>
         <h2 class="section-title">Selected systems</h2>
 
         <div class="project-grid">
@@ -349,6 +420,23 @@
             </ul>
             <a class="project-link" href="https://github.com/SushovitNanda/Multi-Agent-Healthcare-AI-Assistant"
               target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>MedBot — Medical Exam RAG System</h3>
+            <p>A medical exam-focused RAG system for DHA, MDS, and ORE candidates that answers strictly from a curated
+              PDF knowledge base — hybrid dense + BM25 + CLIP image retrieval fused via reciprocal rank fusion with
+              cross-encoder reranking, agentic orchestration with exam-namespace enforcement, document grading, and
+              conditional query rewriting, and context-only generation with hallucination checks and confidence
+              scoring. FastAPI + Qdrant backend with a Gemini → Groq Llama cascade and a Next.js 14 streaming
+              frontend.</p>
+            <ul class="tag-row project-tags">
+              <li>Hybrid multimodal RAG</li>
+              <li>Qdrant</li>
+              <li>FastAPI + Next.js</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/MedBot" target="_blank"
+              rel="noopener">View repository ↗</a>
           </article>
 
           <article class="project-card">
@@ -416,7 +504,7 @@
     <!-- ===================== SKILLS ===================== -->
     <section id="skills" class="skills">
       <div class="section-inner">
-        <p class="section-eyebrow">06 — Toolkit</p>
+        <p class="section-eyebrow">07 — Toolkit</p>
         <h2 class="section-title">Skills &amp; technologies</h2>
 
         <div class="skill-groups">
@@ -508,7 +596,7 @@
     <!-- ===================== EDUCATION ===================== -->
     <section id="education" class="education">
       <div class="section-inner">
-        <p class="section-eyebrow">07 — Education</p>
+        <p class="section-eyebrow">08 — Education</p>
         <div class="edu-card">
           <div class="edu-main">
             <h3>Dual Degree, Bachelor of Science &amp; Master of Science</h3>
@@ -565,7 +653,7 @@
     <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="contact">
       <div class="section-inner">
-        <p class="section-eyebrow">08 — Contact</p>
+        <p class="section-eyebrow">09 — Contact</p>
         <h2 class="section-title">Let's route something together</h2>
         <p class="contact-lede">Open to research collaborations, engineering roles, and conversations about LLM systems,
           routing, and evaluation.</p>
@@ -600,7 +688,7 @@
   <footer class="site-footer">
     <div class="section-inner footer-inner">
       <p>© <span id="year"></span> Sushovit Nanda.</p>
-      <p class="footer-note">Last updated: July 2026</p>
+      <p class="footer-note">Last updated: October 2026</p>
     </div>
   </footer>
 
@@ -625,7 +713,7 @@
 
     // Scroll-reveal for sections and timeline items
     const revealTargets = document.querySelectorAll(
-      '.stat, .tl-item, .pub-card, .project-card, .skill-group, .edu-card, .about-pillar'
+      '.stat, .tl-item, .program-card, .day-card, .pub-card, .project-card, .skill-group, .edu-card, .about-pillar'
     );
     revealTargets.forEach(el => el.classList.add('reveal'));
 
