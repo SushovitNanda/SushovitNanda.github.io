@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sushovit Nanda | AI/ML Engineer &amp; LLM Systems Researcher</title>
   <meta name="description"
-    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, frontier AI security, RAG systems, and requirements-quality ML research.">
+    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, frontier AI security, multi-agent collusion detection, RAG systems, and requirements-quality ML research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -150,7 +150,10 @@
               agile software requirements, and includes an LLM-as-a-Judge evaluation pipeline built to test whether
               automated evaluation can reliably substitute for human annotation. This grew out of SCALAR, my bachelor's
               thesis on unsupervised requirement clustering, currently in major revisions at <em>Science of Computer
-                Programming</em>.
+                Programming</em>. Most recently, at the Apart Research AI Collusion Research Sprint, I built a
+              design-labelled benchmark and a suite of monitors for catching collusion between LLM bidding agents,
+              testing whether a monitor that reads what agents say and what they do beats one that reads either
+              channel alone.
             </p>
             <p>
               Across both tracks, I'm drawn to the same set of problems: LLM reliability and safety, evaluation and
@@ -350,6 +353,66 @@
             </li>
           </ol>
         </article>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Research sprint · Track 2: Detection and Audit of Collusion · Solo submission</p>
+              <h3>AI Collusion Research Sprint</h3>
+              <p class="program-org">Apart Research · with Poseidon Research, AE Studio &amp; Modal</p>
+              <p class="program-select">A weekend research sprint on collusion between AI agents: when it emerges in
+                markets and agent deployments, how auditors can tell it from coincidence, and how defenders can break
+                it. Working solo in Track 2, I built <strong>a repeated procurement auction with three LLM
+                  bidders</strong>, two of which share a parent company, and asked the track's central question: does
+                a monitor that reads both what agents <em>say</em> and what they <em>do</em> catch collusion better
+                than one that reads either alone? The output is an 8-page report, <strong>Say, Do, or Both? Catching
+                  Collusion Through Cross-Agent Consistency</strong>, and an open-source pipeline with every run log
+                and analysis behind it, spanning eight model families.</p>
+              <div class="program-links">
+                <a href="https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25" target="_blank" rel="noopener">Sprint page ↗</a>
+                <a href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint" target="_blank" rel="noopener">GitHub repository ↗</a>
+                <a href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint/blob/main/APART_Collusion_Research_Report.pdf" target="_blank" rel="noopener">Research report (PDF) ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">23 — 25 Oct 2026</p>
+          </div>
+
+          <p class="curriculum-label">What I built over the sprint</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">01</span>
+              <h4>Design-labelled benchmark</h4>
+              <p>48 games across six case types — explicit and tacit collusion, cheap talk, innocent parallel
+                bidding, and two honest controls — each built so that one monitoring channel alone is fooled.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">02</span>
+              <h4>Monitor suite</h4>
+              <p>One frozen LLM judge reading messages only, bids only, both, or a structured claims-vs-outcomes
+                report; non-LLM bid-rigging screens from antitrust economics; and a cross-agent consistency check
+                (did firm B do what firm A said B would do?).</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">03</span>
+              <h4>Formal channel test</h4>
+              <p>Leave-one-seed-out thresholds and a paired bootstrap of the AUROC gain over the best single channel,
+                so "combining channels helps" is tested rather than assumed. The raw combined judge did not win; a
+                cross-fitted hybrid classifier did.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">04</span>
+              <h4>Unscripted collusion dial</h4>
+              <p>A group-bonus rate λ rewards sister firms for not competing while nothing tells them to coordinate —
+                swept up and down under a stated law, no rule, a soft rule, and a surveillance notice.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">05</span>
+              <h4>Six-family model panel</h4>
+              <p>90 further games with GPT-OSS, Gemini, DeepSeek, Llama, Mistral, and Claude Haiku agents via
+                OpenRouter, testing whether the frozen monitors transfer across model families.</p>
+            </li>
+          </ol>
+        </article>
       </div>
     </section>
 
@@ -379,6 +442,23 @@
             <a class="pub-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5588660" target="_blank"
               rel="noopener">Read on SSRN ↗</a>
           </article>
+
+          <article class="pub-card">
+            <p class="pub-kind">Research report · Apart Research AI Collusion Research Sprint · Oct 2026</p>
+            <h3>Say, Do, or Both? Catching Collusion Through Cross-Agent Consistency</h3>
+            <p class="pub-meta">Sushovit Nanda · Sole author · Track 2: Detection and Audit of Collusion</p>
+            <p class="pub-desc">A 48-game benchmark of LLM-agent procurement auctions across six case types, each
+              designed to fool one monitoring channel, used to test whether a monitor reading both messages and bids
+              beats the best single channel. The combined judge did not; a cross-fitted hybrid classifier did (AUROC
+              0.977, zero false positives), and a cross-agent consistency check flagged 83% of explicit rings and
+              nothing honest. Unscripted, a group bonus produced a cartel in round one unless the prompt stated a
+              law, and the signal ranking held across six further model families.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint/blob/main/APART_Collusion_Research_Report.pdf" target="_blank" rel="noopener">Report (PDF) ↗</a>
+              <a class="pub-link" href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint" target="_blank" rel="noopener">Code &amp; results ↗</a>
+              <a class="pub-link" href="https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25" target="_blank" rel="noopener">Sprint page ↗</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -391,6 +471,7 @@
 
         <ul class="tag-row interest-tags">
           <li>Agentic AI &amp; multi-agent systems</li>
+          <li>Multi-agent collusion detection &amp; monitoring</li>
           <li>LLM routing &amp; model selection</li>
           <li>AI security &amp; adversarial robustness</li>
           <li>Compute-efficient fine-tuning</li>
@@ -407,6 +488,23 @@
         <h2 class="section-title">Selected systems</h2>
 
         <div class="project-grid">
+          <article class="project-card">
+            <h3>AI Collusion Benchmark &amp; Monitor Suite</h3>
+            <p>The pipeline behind my Apart Research sprint report: a repeated first-price procurement auction in
+              which three LLM firms Think, Say, and Do each round, two of them sharing a parent company and a tunable
+              group bonus λ. Ships a six-case-type labelled evaluation set, a frozen LLM judge with five views,
+              antitrust bid-rigging screens, a cross-agent consistency scorer, a cross-fitted hybrid monitor, and an
+              evaluation module with leave-one-seed-out thresholds and paired-bootstrap channel comparison. Runs
+              against any OpenAI-compatible endpoint (Modal, OpenRouter), with 41 acceptance tests on a scripted mock
+              model.</p>
+            <ul class="tag-row project-tags">
+              <li>Multi-agent simulation</li>
+              <li>LLM monitors &amp; AUROC evaluation</li>
+              <li>Modal + OpenRouter</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
           <article class="project-card">
             <h3>Multi-Agent Healthcare AI Assistant</h3>
             <p>A supervisor-routed multi-agent assistant for hospital operations — doctor discovery, appointment
@@ -555,6 +653,7 @@
               <li>OWASP LLM Top 10</li>
               <li>Threat modeling</li>
               <li>Multi-turn agentic red-teaming</li>
+              <li>Multi-agent collusion detection &amp; LLM monitors</li>
               <li>Hybrid inference pipeline design</li>
             </ul>
           </div>
@@ -578,6 +677,8 @@
               <li>Azure AI Foundry</li>
               <li>Cosmos DB</li>
               <li>GCP</li>
+              <li>Modal</li>
+              <li>OpenRouter</li>
               <li>ONNX deployment</li>
             </ul>
           </div>

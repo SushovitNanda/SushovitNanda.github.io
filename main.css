@@ -508,6 +508,7 @@ img { max-width: 100%; display: block; }
   transition: border-color 0.2s ease;
 }
 .program-card:hover { border-color: var(--accent-2); }
+.program-card + .program-card { margin-top: 24px; }
 
 .program-head {
   display: flex;
@@ -629,6 +630,8 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   border-bottom: 1px solid var(--accent);
 }
+.pub-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; }
+.pub-links .pub-link { margin-top: 0; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .tag-row li {
