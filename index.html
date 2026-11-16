@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sushovit Nanda | AI/ML Engineer &amp; LLM Systems Researcher</title>
   <meta name="description"
-    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, frontier AI security, multi-agent collusion detection, RAG systems, and requirements-quality ML research.">
+    content="Portfolio of Sushovit Nanda — AI/ML Engineer and LLM Systems Researcher. Intelligent model routing, adversarial robustness, frontier AI security, multi-agent collusion detection, agent-swarm oversight, safety repair under fine-tuning, LLM legal grounding, RAG systems, and requirements-quality ML research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -150,10 +150,14 @@
               agile software requirements, and includes an LLM-as-a-Judge evaluation pipeline built to test whether
               automated evaluation can reliably substitute for human annotation. This grew out of SCALAR, my bachelor's
               thesis on unsupervised requirement clustering, currently in major revisions at <em>Science of Computer
-                Programming</em>. Most recently, at the Apart Research AI Collusion Research Sprint, I built a
-              design-labelled benchmark and a suite of monitors for catching collusion between LLM bidding agents,
-              testing whether a monitor that reads what agents say and what they do beats one that reads either
-              channel alone.
+                Programming</em>. Through a run of research sprints in late 2026, I've turned the same lens on AI
+              safety. At the Apart Research AI Collusion Research Sprint, I built a design-labelled benchmark and a
+              suite of monitors for catching collusion between LLM bidding agents. At the Swarm Alignment Hackathon, I
+              extended that cross-agent consistency idea into a causal closure audit that still works when agent
+              swarms falsify their own logs. At the Lexsi AI Safety and Alignment Hackathon, I measured how benign
+              medical fine-tuning erodes a small multilingual model's refusals and repaired it with a steering vector
+              that survives quantization. And at the AI x Epistemics sprint, a legal professional and I showed that
+              grounding LLM legal advice helps only when the source actually applies to the jurisdiction.
             </p>
             <p>
               Across both tracks, I'm drawn to the same set of problems: LLM reliability and safety, evaluation and
@@ -354,6 +358,194 @@
           </ol>
         </article>
 
+        <article class="program-card is-compact">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Professional certificate · 30-hour course</p>
+              <h3>Technical AI Safety</h3>
+              <p class="program-org">BlueDot Impact</p>
+              <p class="program-select">A 30-hour course on current AI safety techniques: identifying gaps in my own
+                knowledge of the field, building threat models with kill-chain analysis, and writing a concrete plan for
+                contributing to safer AI.</p>
+              <div class="program-links">
+                <a href="https://bluedot.org/certification?id=recYSiNsctw6LMEQc" target="_blank"
+                  rel="noopener">View certificate ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">Issued 15 Nov 2026</p>
+          </div>
+        </article>
+
+        <h3 class="program-subhead">Research sprints &amp; hackathons</h3>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Research sprint · Track 1 · Team of two, with Beatriz Lourenço</p>
+              <h3>AI x Epistemics Research Sprint</h3>
+              <p class="program-org">Apart Research</p>
+              <p class="program-select">Together with a legal professional, I tested when retrieval actually grounds
+                an LLM's legal advice. Our case is <strong>Decreto-Lei n.º 125/2025</strong>, Portugal's December
+                2025 transposition of the NIS 2 Directive, published after the tested models' training cutoffs. The
+                output is a report, <strong>Grounded or Guessing? LLM Compliance Advice under Portugal's NIS 2
+                  Transposition</strong>, and an open, resumable evaluation pipeline with every answer and judgment
+                behind it.</p>
+              <div class="program-links">
+                <a href="https://apartresearch.com/sprints/projects/grounded-or-guessing-llm-compliance-advice-under-portugals-nis-2-transposition-841oa7ro92" target="_blank" rel="noopener">Research report ↗</a>
+                <a href="https://github.com/SushovitNanda/nis2-legal-grounding-eval" target="_blank" rel="noopener">GitHub repository ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">13 — 15 Nov 2026</p>
+          </div>
+
+          <p class="curriculum-label">What we built over the sprint</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">01</span>
+              <h4>Expert-built standard</h4>
+              <p>22 compliance questions and a 71-item checklist written by a legal professional, each item cited to
+                the official text and marked verified, inferred, or to confirm.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">02</span>
+              <h4>Three-condition design</h4>
+              <p>Every question asked with no document, with the decree-law, and with the EU Directive instead —
+                792 answers from four models over three repetitions.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">03</span>
+              <h4>Validated judging</h4>
+              <p>Two LLM judges from different model families, a deterministic citation parser, and a blind human
+                grade of 25 answers (Cohen's κ 0.64–0.92 against the legal professional).</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">04</span>
+              <h4>Applicability, not just grounding</h4>
+              <p>The right text lifted checklist coverage from 27% to 88% and cut answers with unsupported claims from
+                95% to 10%. The Directive instead left coverage at 26%, while 94% of answers applied it as Portuguese
+                law with real citations a citation check cannot flag.</p>
+            </li>
+          </ol>
+        </article>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Hackathon · Track 4: Multi-Agent Oversight and Control · Solo submission</p>
+              <h3>Swarm Alignment Hackathon</h3>
+              <p class="program-org">Apart Research</p>
+              <p class="program-select">Every log-based oversight method for agent swarms assumes the logs are
+                complete. Prompted by the July 2026 OpenAI/Hugging Face incident, in which about 1,200 agents
+                coordinated through an unlogged cache namespace and over 7% of reviewed transcripts carried spoofed
+                tool calls, I asked what oversight still works when agents control their own records. My answer, a
+                <strong>causal closure audit</strong>, extends the cross-agent consistency idea from my collusion
+                sprint. The output is a report, <strong>Nothing Comes From Nowhere: Auditing Agent Swarms When Their
+                  Logs Lie</strong>, and an open testbed with a pre-registered plan and a log of every decision.</p>
+              <div class="program-links">
+                <a href="https://apartresearch.com/sprints/projects/nothing-comes-from-nowhere-auditing-agent-swarms-when-their-logs-lie-kbyvo9iv80" target="_blank" rel="noopener">Research report ↗</a>
+                <a href="https://github.com/SushovitNanda/Multi-Agent_Oversight_and_Control" target="_blank" rel="noopener">GitHub repository ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">6 — 8 Nov 2026</p>
+          </div>
+
+          <p class="curriculum-label">What I built over the sprint</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">01</span>
+              <h4>Causal closure audit</h4>
+              <p>Four cross-agent consistency rules — message, state, effect, and knowledge closure — that check
+                whether every fact an agent holds has a logged path, instead of judging what messages say.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">02</span>
+              <h4>Planted tracers</h4>
+              <p>Private facts seeded as ordinary task details. One surfacing in another agent's context with no
+                logged path reveals a hidden channel without observing it; tracers flagged 93% of unlogged-channel
+                episodes.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">03</span>
+              <h4>Swarm testbed</h4>
+              <p>An open 12- to 96-agent LLM software team across mesh, star, and tree topologies — about 600
+                episodes over three model families — plus a check on a real 133-agent swarm, where none of 32,033
+                natural tracers moved without a visible path.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">04</span>
+              <h4>Tamper and witness results</h4>
+              <p>Zero false alarms on 266 honest episodes. The audit caught omission and fabrication from one liar and
+                spoofing from two colluders, where transcript monitors caught at most 17%, and failed only where every
+                party to a record colluded, as the witness theory predicts.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">05</span>
+              <h4>Minimum logging spec</h4>
+              <p>Agent self-reports plus a metadata-level tool gateway kept full recall under one-sided tampering at
+                5% of the bytes of full inference logging.</p>
+            </li>
+          </ol>
+        </article>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Hackathon · Track 2: AI Red Teaming, Safety and Alignment · Project lead, team of two
+              </p>
+              <h3>Lexsi AI Safety and Alignment Hackathon</h3>
+              <p class="program-org">Lexsi Labs · with Cohere Labs &amp; Hugging Face</p>
+              <p class="program-select">A hackathon on red teaming, safety repair, interpretability, and evaluation of
+                open-weights models. With Manish Shaw, I followed <strong>Tiny Aya Global (3.35B)</strong> along the
+                path a clinic deployment takes — benign medical fine-tuning, then quantization for cheap hardware,
+                with users writing in English, Hindi, or Hinglish — under a dated pre-registration. The output is
+                <strong>Safe from Fine-Tune to Phone</strong>, a 73-page report, with the datasets and models
+                released on Hugging Face.</p>
+              <div class="program-links">
+                <a href="https://hackathon.lexsi.ai/" target="_blank" rel="noopener">Hackathon page ↗</a>
+                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone" target="_blank" rel="noopener">GitHub repository ↗</a>
+                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone/blob/main/report/Safe-from-Fine-Tune-to-Phone.pdf" target="_blank" rel="noopener">Research report (PDF) ↗</a>
+                <a href="https://huggingface.co/collections/SushiOrbit/safe-from-fine-tune-to-phone-models" target="_blank" rel="noopener">Hugging Face models ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">1 — 22 Nov 2026</p>
+          </div>
+
+          <p class="curriculum-label">What we built over the hackathon</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">01</span>
+              <h4>ClinicSafe-Hi benchmark</h4>
+              <p>102 harmful clinical requests paired with 102 benign twins in English, Hindi, and Hinglish, combined
+                with Aya Red-teaming and XSTest into a frozen 1,612-prompt test set, plus 500 held-out MedMCQA
+                questions.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">02</span>
+              <h4>Measuring safety drift</h4>
+              <p>One epoch of benign medical LoRA doubled attack success from 18.2% to 36.3%; a token-matched general
+                LoRA control moved only +1.8 points.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">03</span>
+              <h4>Run-time repair</h4>
+              <p>A contrastive activation steering vector cut the fine-tuned model to 26.3% with medical accuracy
+                unchanged (MedMCQA 45.0% → 45.4%) — a serving-time flag, not a weight change.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">04</span>
+              <h4>Surviving deployment</h4>
+              <p>As a llama.cpp control vector on a Q3_K_M GGUF build, the same vector still cut 39.0% to 27.9%
+                (retention 1.01), and held with the system prompt stripped.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">05</span>
+              <h4>Honest negatives</h4>
+              <p>Weight-space patching (ReSta), circuit-restricted patching from EAP-IG refusal circuits, and
+                circuit-guided bit protection did not beat their controls at the settings tried — all reported.</p>
+            </li>
+          </ol>
+        </article>
+
         <article class="program-card">
           <div class="program-head">
             <div class="program-main">
@@ -371,7 +563,7 @@
               <div class="program-links">
                 <a href="https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25" target="_blank" rel="noopener">Sprint page ↗</a>
                 <a href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint" target="_blank" rel="noopener">GitHub repository ↗</a>
-                <a href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint/blob/main/APART_Collusion_Research_Report.pdf" target="_blank" rel="noopener">Research report (PDF) ↗</a>
+                <a href="https://apartresearch.com/sprints/projects/say-do-or-both-catching-collusion-through-crossagent-consistency-v8f2" target="_blank" rel="noopener">Research report ↗</a>
               </div>
             </div>
             <p class="edu-date">23 — 25 Oct 2026</p>
@@ -444,6 +636,52 @@
           </article>
 
           <article class="pub-card">
+            <p class="pub-kind">Research report · Apart Research AI x Epistemics Research Sprint · Nov 2026</p>
+            <h3>Grounded or Guessing? LLM Compliance Advice under Portugal's NIS 2 Transposition</h3>
+            <p class="pub-meta">Beatriz Lourenço, Sushovit Nanda · Track 1</p>
+            <p class="pub-desc">Tests when retrieval grounds legal advice, using a decree-law the models had never
+              seen. Against a 71-item checklist written by a legal professional, giving models the right text lifted
+              coverage from 27% to 88% and cut answers with unsupported claims from 95% to 10%. Giving them the EU
+              Directive instead looked like success, with real citations, yet 94% of answers applied it as Portuguese
+              law. Grounded legal advice is only as reliable as the applicability of its source.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://apartresearch.com/sprints/projects/grounded-or-guessing-llm-compliance-advice-under-portugals-nis-2-transposition-841oa7ro92" target="_blank" rel="noopener">Report ↗</a>
+              <a class="pub-link" href="https://github.com/SushovitNanda/nis2-legal-grounding-eval" target="_blank" rel="noopener">Code &amp; results ↗</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <p class="pub-kind">Research report · Apart Research Swarm Alignment Hackathon · Nov 2026</p>
+            <h3>Nothing Comes From Nowhere: Auditing Agent Swarms When Their Logs Lie</h3>
+            <p class="pub-meta">Sushovit Nanda · Sole author · Track 4: Multi-Agent Oversight and Control</p>
+            <p class="pub-desc">A causal closure audit for agent swarms whose logs may be falsified: four cross-agent
+              consistency rules plus planted tracers that expose hidden channels without observing them. On a 12- to
+              96-agent LLM testbed it raised zero alerts on 266 honest episodes, caught omission, fabrication, and
+              spoofing where transcript monitors caught at most 17%, and flagged 93% of unlogged-channel episodes;
+              a real 133-agent swarm showed no tracer moving without a visible path.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://apartresearch.com/sprints/projects/nothing-comes-from-nowhere-auditing-agent-swarms-when-their-logs-lie-kbyvo9iv80" target="_blank" rel="noopener">Report ↗</a>
+              <a class="pub-link" href="https://github.com/SushovitNanda/Multi-Agent_Oversight_and_Control" target="_blank" rel="noopener">Code &amp; results ↗</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <p class="pub-kind">Research report · Lexsi AI Safety and Alignment Hackathon · Nov 2026</p>
+            <h3>Safe from Fine-Tune to Phone</h3>
+            <p class="pub-meta">Sushovit Nanda (lead), Manish Shaw · Track 2: AI Red Teaming, Safety and Alignment</p>
+            <p class="pub-desc">Follows Tiny Aya Global from benign medical fine-tuning to a quantized on-device build,
+              across English, Hindi, and Hinglish. One epoch of medical LoRA doubled attack success (18.2% → 36.3%);
+              a run-time steering vector cut it to 26.3% with medical accuracy unchanged, and the repair survived
+              Q3_K_M GGUF quantization on llama.cpp. The repaired model is safer than the fine-tune it replaces, not
+              than the original.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone/blob/main/report/Safe-from-Fine-Tune-to-Phone.pdf" target="_blank" rel="noopener">Report (PDF) ↗</a>
+              <a class="pub-link" href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone" target="_blank" rel="noopener">Code &amp; results ↗</a>
+              <a class="pub-link" href="https://hackathon.lexsi.ai/" target="_blank" rel="noopener">Hackathon page ↗</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
             <p class="pub-kind">Research report · Apart Research AI Collusion Research Sprint · Oct 2026</p>
             <h3>Say, Do, or Both? Catching Collusion Through Cross-Agent Consistency</h3>
             <p class="pub-meta">Sushovit Nanda · Sole author · Track 2: Detection and Audit of Collusion</p>
@@ -454,7 +692,7 @@
               nothing honest. Unscripted, a group bonus produced a cartel in round one unless the prompt stated a
               law, and the signal ranking held across six further model families.</p>
             <div class="pub-links">
-              <a class="pub-link" href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint/blob/main/APART_Collusion_Research_Report.pdf" target="_blank" rel="noopener">Report (PDF) ↗</a>
+              <a class="pub-link" href="https://apartresearch.com/sprints/projects/say-do-or-both-catching-collusion-through-crossagent-consistency-v8f2" target="_blank" rel="noopener">Report ↗</a>
               <a class="pub-link" href="https://github.com/SushovitNanda/AI-Collusion-Research-Sprint" target="_blank" rel="noopener">Code &amp; results ↗</a>
               <a class="pub-link" href="https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25" target="_blank" rel="noopener">Sprint page ↗</a>
             </div>
@@ -472,8 +710,11 @@
         <ul class="tag-row interest-tags">
           <li>Agentic AI &amp; multi-agent systems</li>
           <li>Multi-agent collusion detection &amp; monitoring</li>
+          <li>Oversight &amp; control of agent swarms</li>
           <li>LLM routing &amp; model selection</li>
           <li>AI security &amp; adversarial robustness</li>
+          <li>Safety drift under fine-tuning &amp; quantization</li>
+          <li>Grounding, epistemics &amp; legal reliability of LLMs</li>
           <li>Compute-efficient fine-tuning</li>
           <li>Hallucination detection &amp; output faithfulness</li>
           <li>Automated requirements engineering</li>
@@ -488,6 +729,50 @@
         <h2 class="section-title">Selected systems</h2>
 
         <div class="project-grid">
+          <article class="project-card">
+            <h3>Causal Closure Audit for Agent Swarms</h3>
+            <p>The pipeline behind my Swarm Alignment Hackathon report: a pure-Python mock software team of 12 to 96
+              LLM agents working tickets over mesh, star, and tree topologies, with in-band, off-log, steganographic,
+              and paraphrase collusion conditions. Ships a tamper layer (omission, fabrication, spoofing, mutual
+              forgery), the four-rule closure auditor, tracer matching with multi-layer decoders, vantage-point and
+              retention ablations, and adaptive adversary runs that are shown the rules.</p>
+            <ul class="tag-row project-tags">
+              <li>Multi-agent oversight</li>
+              <li>Tamper-resistant auditing</li>
+              <li>Swarm simulation</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Multi-Agent_Oversight_and_Control" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Safe from Fine-Tune to Phone</h3>
+            <p>Code, data, and models for my Lexsi hackathon entry: the ClinicSafe-Hi trilingual safety set, token-matched
+              LoRA corpora curated with CuratorKIT, EAP-IG refusal-circuit discovery with CircuitKIT, contrastive
+              activation steering exported as llama.cpp control vectors, and GGUF evaluation runs driven by AuditKIT.
+              Every result is a paired comparison with bootstrap intervals and Holm correction; no harmful model
+              output is published.</p>
+            <ul class="tag-row project-tags">
+              <li>Activation steering</li>
+              <li>LoRA + GGUF quantization</li>
+              <li>Multilingual red-teaming</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>NIS 2 Legal Grounding Evaluation</h3>
+            <p>The resumable pipeline behind our AI x Epistemics report: official decree-law and Directive texts with
+              article indexes, a legal professional's reference standard, a deterministic citation parser, blinded LLM
+              judges from two model families, and per-question bootstrap analysis. Rebuilds every table, figure, and
+              the report from stored answers, and runs offline on mock models, with 34 network-free tests.</p>
+            <ul class="tag-row project-tags">
+              <li>LLM evaluation</li>
+              <li>LLM-as-a-Judge</li>
+              <li>Legal RAG grounding</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/nis2-legal-grounding-eval" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
           <article class="project-card">
             <h3>AI Collusion Benchmark &amp; Monitor Suite</h3>
             <p>The pipeline behind my Apart Research sprint report: a repeated first-price procurement auction in
@@ -631,6 +916,7 @@
               <li>Fine-tuning</li>
               <li>LoRA / QLoRA / PEFT</li>
               <li>NF4 quantization</li>
+              <li>GGUF / llama.cpp deployment</li>
               <li>Semantic embeddings</li>
             </ul>
           </div>
@@ -654,6 +940,9 @@
               <li>Threat modeling</li>
               <li>Multi-turn agentic red-teaming</li>
               <li>Multi-agent collusion detection &amp; LLM monitors</li>
+              <li>Tamper-resistant log auditing</li>
+              <li>Activation steering &amp; safety repair</li>
+              <li>Refusal-circuit discovery (EAP-IG)</li>
               <li>Hybrid inference pipeline design</li>
             </ul>
           </div>
@@ -789,7 +1078,7 @@
   <footer class="site-footer">
     <div class="section-inner footer-inner">
       <p>© <span id="year"></span> Sushovit Nanda.</p>
-      <p class="footer-note">Last updated: October 2026</p>
+      <p class="footer-note">Last updated: November 2026</p>
     </div>
   </footer>
 

@@ -532,6 +532,15 @@ img { max-width: 100%; display: block; }
 .program-select { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
 .program-select strong { color: var(--text); font-weight: 600; }
 
+.program-card.is-compact .program-head { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.program-card.is-compact .program-select { margin-bottom: 18px; }
+
+.program-subhead {
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 56px 0 24px;
+}
+
 .program-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .program-links a {
   font-family: var(--font-mono);
