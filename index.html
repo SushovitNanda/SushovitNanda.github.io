@@ -86,7 +86,7 @@
 
         <div class="hero-figure">
           <div class="hero-image-wrapper">
-            <img src="professional image.png" alt="Sushovit Nanda" class="hero-img" loading="eager" />
+            <img src="images/professional-image.png" alt="Sushovit Nanda" class="hero-img" loading="eager" />
           </div>
         </div>
       </div>
@@ -152,7 +152,8 @@
               thesis on unsupervised requirement clustering, currently in major revisions at <em>Science of Computer
                 Programming</em>. Through a run of research sprints in late 2026, I've turned the same lens on AI
               safety. At the Apart Research AI Collusion Research Sprint, I built a design-labelled benchmark and a
-              suite of monitors for catching collusion between LLM bidding agents. At the Swarm Alignment Hackathon, I
+              suite of monitors for catching collusion between LLM bidding agents, a project that placed in the top
+              25% of more than 390 submissions. At the Swarm Alignment Hackathon, I
               extended that cross-agent consistency idea into a causal closure audit that still works when agent
               swarms falsify their own logs. At the Lexsi AI Safety and Alignment Hackathon, I measured how benign
               medical fine-tuning erodes a small multilingual model's refusals and repaired it with a steering vector
@@ -203,23 +204,43 @@
           <li class="tl-item">
             <div class="tl-when"><span class="tl-date">Dec 2025 — Present</span></div>
             <div class="tl-content">
-              <h3>AI/ML Engineer, R&amp;D <span class="tl-org">· Innobayt Innovative Solutions LLC</span></h3>
-              <p class="tl-role">Leading research and development of an intelligent <strong>multi-turn AI red-teaming
-                  agentic framework</strong> employing LLMs to automate adversarial attack generation, evaluation
-                orchestration,
-                and vulnerability reporting, advancing the study of security monitoring and output reliability in
-                production pipelines.</p>
+              <h3>AI/ML Engineer, Research and Development <span class="tl-org">· Innobayt Innovative Solutions
+                  LLC</span></h3>
+              <p class="tl-role">Remote</p>
+              <h4 class="tl-subhead">AI safety and security</h4>
               <ul>
-                <li>Architected an asynchronous 2-step hybrid threat detection pipeline in FastAPI — benign prompts
-                  detected within 25ms, adversarial prompts classified within 130ms.</li>
-                <li>Deployed the transformer-based threat classifier as a quantized ONNX model on Azure Blob Container
-                  for portable, cloud-native inference.</li>
-                <li>Validated the system against 500+ adversarial prompts with Promptfoo, achieving 96%+ detection
-                  across all OWASP LLM Top 10 categories.</li>
-                <li>Built an asynchronous egress-detection module for sensitive data leakage, backed by an async RAG
-                  pipeline on Azure ML Studio and Cosmos DB.</li>
-                <li>The threat detection model and intelligent multi-turn red-teaming model can be explored live at <a
-                    href="https://velyana.com/" target="_blank" rel="noopener">velyana.com ↗</a>.</li>
+                <li>Led R&amp;D of a <strong>multi-turn agentic red-teaming framework</strong>. Attacker LLMs adaptively
+                  search for unsafe behaviour in target models, an LLM evaluator scores each round, and findings are
+                  compiled into vulnerability reports.</li>
+                <li>Ran controlled campaigns holding attacks constant across providers. GPT-5.1 mini was compromised in 6
+                  of 10 campaigns via OpenRouter versus 1–2 of 10 via Azure AI Foundry; traced the gap to provider-side
+                  safety layers rather than model weights.</li>
+                <li>Built the FastAPI attack-engine service that orchestrates data, guardrail, and breach-detection
+                  engines with per-round callbacks. Found and fixed a race condition that silently dropped evaluation
+                  rounds.</li>
+                <li>Architected a two-step hybrid threat detection pipeline (async FastAPI, ONNX on Azure, Docker and
+                  Kubernetes). It flags benign prompts in under 25ms and adversarial prompts in under 130ms.</li>
+                <li>Benchmarked the detector on 500+ adversarial prompts in Promptfoo, reaching 96%+ detection across
+                  all OWASP LLM Top 10 categories. Live at <a href="https://velyana.com/" target="_blank"
+                    rel="noopener">velyana.com ↗</a>.</li>
+                <li>Designed a 3-tier AI egress firewall (Forge Defend) for a client pilot: hard-block, LLM-based
+                  rewrite, and pass-through, with policies ingested automatically from client documents.</li>
+                <li>Built an async monitoring module that flags sensitive data leakage and hallucinations in LLM
+                  outputs, backed by a RAG pipeline on Azure ML and Cosmos DB.</li>
+              </ul>
+              <h4 class="tl-subhead">Production LLM systems</h4>
+              <ul>
+                <li>Built a stateful, graph-orchestrated <strong>multi-agent assistant</strong> on Azure OpenAI for a
+                  hospital network, covering intent understanding, symptom triage, doctor discovery, insurance
+                  validation, and appointment booking, at 11–14s per turn.</li>
+                <li>Paired a small-model router with a larger reasoning model, offloading 70%+ of micro-classification
+                  tasks and cutting token cost by about 65%.</li>
+                <li>Added a Redis-backed semantic cache (0.90+ similarity threshold) that returns verified answers to
+                  recurring queries in about 120ms.</li>
+                <li>Designed a promote-with-review improvement pipeline: nightly metrics, auto-generated candidate
+                  changes, shadow-run validation, a human review gate, and rollback-capable deployment.</li>
+                <li>Designed a 9-checkpoint abandonment detection model with a 2-minute idle watchdog and an async
+                  root-cause analyser for real-time visibility into patient drop-off.</li>
               </ul>
             </div>
           </li>
@@ -297,6 +318,24 @@
         <p class="section-eyebrow">03 — Programs</p>
         <h2 class="section-title">Selective programs &amp; training</h2>
 
+        <article class="program-card is-compact">
+          <div class="program-head">
+            <div class="program-main">
+              <p class="pub-kind">Professional certificate · 30-hour course</p>
+              <h3>Technical AI Safety</h3>
+              <p class="program-org">BlueDot Impact</p>
+              <p class="program-select">A 30-hour course on current AI safety techniques: identifying gaps in my own
+                knowledge of the field, building threat models with kill-chain analysis, and writing a concrete plan for
+                contributing to safer AI.</p>
+              <div class="program-links">
+                <a href="https://bluedot.org/certification?id=recYSiNsctw6LMEQc" target="_blank"
+                  rel="noopener">View certificate ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">Issued 15 Nov 2026</p>
+          </div>
+        </article>
+
         <article class="program-card">
           <div class="program-head">
             <div class="program-main">
@@ -358,24 +397,6 @@
           </ol>
         </article>
 
-        <article class="program-card is-compact">
-          <div class="program-head">
-            <div class="program-main">
-              <p class="pub-kind">Professional certificate · 30-hour course</p>
-              <h3>Technical AI Safety</h3>
-              <p class="program-org">BlueDot Impact</p>
-              <p class="program-select">A 30-hour course on current AI safety techniques: identifying gaps in my own
-                knowledge of the field, building threat models with kill-chain analysis, and writing a concrete plan for
-                contributing to safer AI.</p>
-              <div class="program-links">
-                <a href="https://bluedot.org/certification?id=recYSiNsctw6LMEQc" target="_blank"
-                  rel="noopener">View certificate ↗</a>
-              </div>
-            </div>
-            <p class="edu-date">Issued 15 Nov 2026</p>
-          </div>
-        </article>
-
         <h3 class="program-subhead">Research sprints &amp; hackathons</h3>
 
         <article class="program-card">
@@ -391,8 +412,9 @@
                   Transposition</strong>, and an open, resumable evaluation pipeline with every answer and judgment
                 behind it.</p>
               <div class="program-links">
-                <a href="https://apartresearch.com/sprints/projects/grounded-or-guessing-llm-compliance-advice-under-portugals-nis-2-transposition-841oa7ro92" target="_blank" rel="noopener">Research report ↗</a>
+                <a href="https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15" target="_blank" rel="noopener">Sprint page ↗</a>
                 <a href="https://github.com/SushovitNanda/nis2-legal-grounding-eval" target="_blank" rel="noopener">GitHub repository ↗</a>
+                <a href="https://apartresearch.com/sprints/projects/grounded-or-guessing-llm-compliance-advice-under-portugals-nis-2-transposition-841oa7ro92" target="_blank" rel="noopener">Research report ↗</a>
               </div>
             </div>
             <p class="edu-date">13 — 15 Nov 2026</p>
@@ -442,8 +464,9 @@
                 sprint. The output is a report, <strong>Nothing Comes From Nowhere: Auditing Agent Swarms When Their
                   Logs Lie</strong>, and an open testbed with a pre-registered plan and a log of every decision.</p>
               <div class="program-links">
-                <a href="https://apartresearch.com/sprints/projects/nothing-comes-from-nowhere-auditing-agent-swarms-when-their-logs-lie-kbyvo9iv80" target="_blank" rel="noopener">Research report ↗</a>
+                <a href="https://apartresearch.com/sprints/swarm-alignment-2026" target="_blank" rel="noopener">Sprint page ↗</a>
                 <a href="https://github.com/SushovitNanda/Multi-Agent_Oversight_and_Control" target="_blank" rel="noopener">GitHub repository ↗</a>
+                <a href="https://apartresearch.com/sprints/projects/nothing-comes-from-nowhere-auditing-agent-swarms-when-their-logs-lie-kbyvo9iv80" target="_blank" rel="noopener">Research report ↗</a>
               </div>
             </div>
             <p class="edu-date">6 — 8 Nov 2026</p>
@@ -569,6 +592,23 @@
             <p class="edu-date">23 — 25 Oct 2026</p>
           </div>
 
+          <div class="program-recognition">
+            <div class="recognition-text">
+              <p class="curriculum-label">Recognition</p>
+              <p class="recognition-badge">Top 25% of submissions</p>
+              <p class="recognition-desc">The sprint drew <strong>more than 390 projects</strong> across three tracks.
+                <strong>Say, Do, or Both?</strong>, submitted to the Detection and Audit track, placed in the
+                <strong>top 25%</strong> of all submissions.</p>
+            </div>
+            <a class="recognition-figure" href="images/apart-ai-collusion-sprint-top-25.png" target="_blank"
+              rel="noopener">
+              <img src="images/apart-ai-collusion-sprint-top-25.png"
+                alt="Apart Sprints results email: Say, Do, or Both? Catching Collusion Through Cross-Agent Consistency, submitted to the Detection and audit track, placed in the top 25% of submissions at the AI Collusion Research Sprint, which received more than 390 projects across three tracks."
+                loading="lazy" />
+              <span class="recognition-caption">Results notice from Apart Sprints · Open full size ↗</span>
+            </a>
+          </div>
+
           <p class="curriculum-label">What I built over the sprint</p>
           <ol class="curriculum">
             <li class="day-card">
@@ -647,6 +687,7 @@
             <div class="pub-links">
               <a class="pub-link" href="https://apartresearch.com/sprints/projects/grounded-or-guessing-llm-compliance-advice-under-portugals-nis-2-transposition-841oa7ro92" target="_blank" rel="noopener">Report ↗</a>
               <a class="pub-link" href="https://github.com/SushovitNanda/nis2-legal-grounding-eval" target="_blank" rel="noopener">Code &amp; results ↗</a>
+              <a class="pub-link" href="https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15" target="_blank" rel="noopener">Sprint page ↗</a>
             </div>
           </article>
 
@@ -662,6 +703,7 @@
             <div class="pub-links">
               <a class="pub-link" href="https://apartresearch.com/sprints/projects/nothing-comes-from-nowhere-auditing-agent-swarms-when-their-logs-lie-kbyvo9iv80" target="_blank" rel="noopener">Report ↗</a>
               <a class="pub-link" href="https://github.com/SushovitNanda/Multi-Agent_Oversight_and_Control" target="_blank" rel="noopener">Code &amp; results ↗</a>
+              <a class="pub-link" href="https://apartresearch.com/sprints/swarm-alignment-2026" target="_blank" rel="noopener">Sprint page ↗</a>
             </div>
           </article>
 
@@ -685,6 +727,7 @@
             <p class="pub-kind">Research report · Apart Research AI Collusion Research Sprint · Oct 2026</p>
             <h3>Say, Do, or Both? Catching Collusion Through Cross-Agent Consistency</h3>
             <p class="pub-meta">Sushovit Nanda · Sole author · Track 2: Detection and Audit of Collusion</p>
+            <p class="pub-award">Top 25% of 390+ submissions</p>
             <p class="pub-desc">A 48-game benchmark of LLM-agent procurement auctions across six case types, each
               designed to fool one monitoring channel, used to test whether a monitor reading both messages and bids
               beats the best single channel. The combined judge did not; a cross-fitted hybrid classifier did (AUROC

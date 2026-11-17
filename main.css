@@ -471,6 +471,17 @@ img { max-width: 100%; display: block; }
 }
 
 .tl-content ul { display: flex; flex-direction: column; gap: 9px; }
+.tl-content li strong { color: var(--text); font-weight: 600; }
+.tl-subhead {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+.tl-content ul + .tl-subhead { margin-top: 22px; }
 .tl-content li {
   font-size: 14.5px;
   color: var(--text-muted);
@@ -552,6 +563,57 @@ img { max-width: 100%; display: block; }
   transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 .program-links a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+
+.program-recognition {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: center;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.recognition-badge,
+.pub-award {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.pub-award { font-size: 12px; padding: 4px 10px; margin-bottom: 12px; }
+.recognition-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin: 0; }
+.recognition-desc strong { color: var(--text); font-weight: 600; }
+.recognition-figure {
+  display: block;
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s);
+  padding: 10px;
+  transition: border-color 0.2s ease;
+}
+.recognition-figure:hover { border-color: var(--accent); }
+.recognition-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+.recognition-caption {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 10px;
+}
+.recognition-figure:hover .recognition-caption { color: var(--accent); }
 
 .curriculum-label {
   font-family: var(--font-mono);
@@ -817,6 +879,8 @@ a.contact-value:hover { color: var(--accent-2); text-decoration: underline; }
   .timeline::before { left: 6px; }
   .tl-item { grid-template-columns: 1fr; gap: 10px; padding-left: 26px; }
   .tl-when::after { left: -21px; right: auto; top: 6px; }
+
+  .program-recognition { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
