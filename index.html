@@ -157,7 +157,7 @@
               extended that cross-agent consistency idea into a causal closure audit that still works when agent
               swarms falsify their own logs. At the Lexsi AI Safety and Alignment Hackathon, I measured how benign
               medical fine-tuning erodes a small multilingual model's refusals and repaired it with a steering vector
-              that survives quantization. And at the AI x Epistemics sprint, a legal professional and I showed that
+              that survives quantization, work that also placed in the top 25% of 369 submissions. And at the AI x Epistemics sprint, a legal professional and I showed that
               grounding LLM legal advice helps only when the source actually applies to the jurisdiction.
             </p>
             <p>
@@ -402,6 +402,84 @@
         <article class="program-card">
           <div class="program-head">
             <div class="program-main">
+              <p class="pub-kind">Hackathon · Track 2: AI Red Teaming, Safety and Alignment · Project lead, team of two
+              </p>
+              <h3>Lexsi AI Safety and Alignment Hackathon</h3>
+              <p class="program-org">Lexsi Labs · with Cohere Labs &amp; Hugging Face</p>
+              <p class="program-select">A hackathon on red teaming, safety repair, interpretability, and evaluation of
+                open-weights models. With Manish Shaw, I followed <strong>Tiny Aya Global (3.35B)</strong> along the
+                path a clinic deployment takes — benign medical fine-tuning, then quantization for cheap hardware,
+                with users writing in English, Hindi, or Hinglish — under a dated pre-registration. The output is
+                <strong>Safe from Fine-Tune to Phone</strong>, a 73-page report, with the datasets and models
+                released on Hugging Face.</p>
+              <div class="program-links">
+                <a href="https://hackathon.lexsi.ai/" target="_blank" rel="noopener">Hackathon page ↗</a>
+                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone" target="_blank" rel="noopener">GitHub repository ↗</a>
+                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone/blob/main/report/Safe-from-Fine-Tune-to-Phone.pdf" target="_blank" rel="noopener">Research report (PDF) ↗</a>
+                <a href="https://huggingface.co/collections/SushiOrbit/safe-from-fine-tune-to-phone-models" target="_blank" rel="noopener">Hugging Face models ↗</a>
+              </div>
+            </div>
+            <p class="edu-date">1 — 22 Nov 2026</p>
+          </div>
+
+          <div class="program-recognition">
+            <div class="recognition-text">
+              <p class="curriculum-label">Recognition</p>
+              <p class="recognition-badge">Top 25% of submissions</p>
+              <p class="recognition-desc">The hackathon drew <strong>369 submissions</strong>. <strong>Safe from
+                  Fine-Tune to Phone</strong>, submitted to Track 2a + 2b (AI Safety and Alignment), placed in the
+                <strong>top 25%</strong> and received a certificate of achievement on 19 November 2026.</p>
+              <p class="recognition-meta">Certificate ID LX26-CMSIA-EPGQI ·
+                <a href="https://hackathon.lexsi.ai/results" target="_blank" rel="noopener">Verify results ↗</a></p>
+            </div>
+            <a class="recognition-figure" href="images/lexsi-ai-safety-hackathon-top-25.png" target="_blank"
+              rel="noopener">
+              <img src="images/lexsi-ai-safety-hackathon-top-25.png"
+                alt="Lexsi AI Safety and Alignment Hackathon 2026 certificate of achievement, in partnership with Cohere Labs and Hugging Face: Top 25% of 369 submissions, awarded to team Safe from Fine-Tune to Phone (Sushovit Nanda and Manish Shaw), Track 2a + 2b AI Safety and Alignment, issued 19 November 2026, certificate ID LX26-CMSIA-EPGQI."
+                loading="lazy" />
+              <span class="recognition-caption">Certificate of achievement from Lexsi.ai · Open full size ↗</span>
+            </a>
+          </div>
+
+          <p class="curriculum-label">What we built over the hackathon</p>
+          <ol class="curriculum">
+            <li class="day-card">
+              <span class="day-num">01</span>
+              <h4>ClinicSafe-Hi benchmark</h4>
+              <p>102 harmful clinical requests paired with 102 benign twins in English, Hindi, and Hinglish, combined
+                with Aya Red-teaming and XSTest into a frozen 1,612-prompt test set, plus 500 held-out MedMCQA
+                questions.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">02</span>
+              <h4>Measuring safety drift</h4>
+              <p>One epoch of benign medical LoRA doubled attack success from 18.2% to 36.3%; a token-matched general
+                LoRA control moved only +1.8 points.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">03</span>
+              <h4>Run-time repair</h4>
+              <p>A contrastive activation steering vector cut the fine-tuned model to 26.3% with medical accuracy
+                unchanged (MedMCQA 45.0% → 45.4%) — a serving-time flag, not a weight change.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">04</span>
+              <h4>Surviving deployment</h4>
+              <p>As a llama.cpp control vector on a Q3_K_M GGUF build, the same vector still cut 39.0% to 27.9%
+                (retention 1.01), and held with the system prompt stripped.</p>
+            </li>
+            <li class="day-card">
+              <span class="day-num">05</span>
+              <h4>Honest negatives</h4>
+              <p>Weight-space patching (ReSta), circuit-restricted patching from EAP-IG refusal circuits, and
+                circuit-guided bit protection did not beat their controls at the settings tried — all reported.</p>
+            </li>
+          </ol>
+        </article>
+
+        <article class="program-card">
+          <div class="program-head">
+            <div class="program-main">
               <p class="pub-kind">Research sprint · Track 1 · Team of two, with Beatriz Lourenço</p>
               <h3>AI x Epistemics Research Sprint</h3>
               <p class="program-org">Apart Research</p>
@@ -506,65 +584,6 @@
               <h4>Minimum logging spec</h4>
               <p>Agent self-reports plus a metadata-level tool gateway kept full recall under one-sided tampering at
                 5% of the bytes of full inference logging.</p>
-            </li>
-          </ol>
-        </article>
-
-        <article class="program-card">
-          <div class="program-head">
-            <div class="program-main">
-              <p class="pub-kind">Hackathon · Track 2: AI Red Teaming, Safety and Alignment · Project lead, team of two
-              </p>
-              <h3>Lexsi AI Safety and Alignment Hackathon</h3>
-              <p class="program-org">Lexsi Labs · with Cohere Labs &amp; Hugging Face</p>
-              <p class="program-select">A hackathon on red teaming, safety repair, interpretability, and evaluation of
-                open-weights models. With Manish Shaw, I followed <strong>Tiny Aya Global (3.35B)</strong> along the
-                path a clinic deployment takes — benign medical fine-tuning, then quantization for cheap hardware,
-                with users writing in English, Hindi, or Hinglish — under a dated pre-registration. The output is
-                <strong>Safe from Fine-Tune to Phone</strong>, a 73-page report, with the datasets and models
-                released on Hugging Face.</p>
-              <div class="program-links">
-                <a href="https://hackathon.lexsi.ai/" target="_blank" rel="noopener">Hackathon page ↗</a>
-                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone" target="_blank" rel="noopener">GitHub repository ↗</a>
-                <a href="https://github.com/SushovitNanda/Safe-from-Fine-Tune-to-Phone/blob/main/report/Safe-from-Fine-Tune-to-Phone.pdf" target="_blank" rel="noopener">Research report (PDF) ↗</a>
-                <a href="https://huggingface.co/collections/SushiOrbit/safe-from-fine-tune-to-phone-models" target="_blank" rel="noopener">Hugging Face models ↗</a>
-              </div>
-            </div>
-            <p class="edu-date">1 — 22 Nov 2026</p>
-          </div>
-
-          <p class="curriculum-label">What we built over the hackathon</p>
-          <ol class="curriculum">
-            <li class="day-card">
-              <span class="day-num">01</span>
-              <h4>ClinicSafe-Hi benchmark</h4>
-              <p>102 harmful clinical requests paired with 102 benign twins in English, Hindi, and Hinglish, combined
-                with Aya Red-teaming and XSTest into a frozen 1,612-prompt test set, plus 500 held-out MedMCQA
-                questions.</p>
-            </li>
-            <li class="day-card">
-              <span class="day-num">02</span>
-              <h4>Measuring safety drift</h4>
-              <p>One epoch of benign medical LoRA doubled attack success from 18.2% to 36.3%; a token-matched general
-                LoRA control moved only +1.8 points.</p>
-            </li>
-            <li class="day-card">
-              <span class="day-num">03</span>
-              <h4>Run-time repair</h4>
-              <p>A contrastive activation steering vector cut the fine-tuned model to 26.3% with medical accuracy
-                unchanged (MedMCQA 45.0% → 45.4%) — a serving-time flag, not a weight change.</p>
-            </li>
-            <li class="day-card">
-              <span class="day-num">04</span>
-              <h4>Surviving deployment</h4>
-              <p>As a llama.cpp control vector on a Q3_K_M GGUF build, the same vector still cut 39.0% to 27.9%
-                (retention 1.01), and held with the system prompt stripped.</p>
-            </li>
-            <li class="day-card">
-              <span class="day-num">05</span>
-              <h4>Honest negatives</h4>
-              <p>Weight-space patching (ReSta), circuit-restricted patching from EAP-IG refusal circuits, and
-                circuit-guided bit protection did not beat their controls at the settings tried — all reported.</p>
             </li>
           </ol>
         </article>
@@ -711,6 +730,7 @@
             <p class="pub-kind">Research report · Lexsi AI Safety and Alignment Hackathon · Nov 2026</p>
             <h3>Safe from Fine-Tune to Phone</h3>
             <p class="pub-meta">Sushovit Nanda (lead), Manish Shaw · Track 2: AI Red Teaming, Safety and Alignment</p>
+            <p class="pub-award">Top 25% of 369 submissions</p>
             <p class="pub-desc">Follows Tiny Aya Global from benign medical fine-tuning to a quantized on-device build,
               across English, Hindi, and Hinglish. One epoch of medical LoRA doubled attack success (18.2% → 36.3%);
               a run-time steering vector cut it to 26.3% with medical accuracy unchanged, and the repair survived
