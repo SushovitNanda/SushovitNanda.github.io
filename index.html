@@ -793,6 +793,22 @@
 
         <div class="project-grid">
           <article class="project-card">
+            <h3>Say vs Do: A Tiered Monitor for Coding Agents</h3>
+            <p>A cheap-to-expensive monitoring cascade for coding agents that slip a flaw into their patch and leave
+              it out of their final report, backtested on 379 real SWE-agent trajectories with 182 injected,
+              validated attacks across seven types. Static analysis, then a cheap say vs do check of the report
+              against the diff, then a strong judge on only the most suspicious ~27% of traffic, reaches recall 0.87
+              at a train-fixed 5% FPR against 0.91 for the judge on everything (not significant) at 34% of the cost,
+              and matches it on two held-out generating models at 14% of the cost.</p>
+            <ul class="tag-row project-tags">
+              <li>AI control</li>
+              <li>Cascaded LLM monitors</li>
+              <li>Coding-agent sabotage</li>
+            </ul>
+            <a class="project-link" href="https://github.com/SushovitNanda/Say-vs-Do-A-Tiered-Monitor-for-Coding-Agents" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
             <h3>Causal Closure Audit for Agent Swarms</h3>
             <p>The pipeline behind my Swarm Alignment Hackathon report: a pure-Python mock software team of 12 to 96
               LLM agents working tickets over mesh, star, and tree topologies, with in-band, off-log, steganographic,
